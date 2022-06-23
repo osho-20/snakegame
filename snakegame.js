@@ -104,19 +104,19 @@ function init()
     snake.createsnake();
     function move(e)
     {
-        if(e.key=='ArrowRight' && snake.prev_direction!="left")
+        if((e.key=='ArrowRight' || e.key=='d') && snake.prev_direction!="left")
         {
             snake.direction="right";
         }
-        else if(e.key=='ArrowDown'&& snake.prev_direction!="up")
+        else if((e.key=='ArrowDown' || e.key=='s') && snake.prev_direction!="up")
         {
             snake.direction="down";
         }
-        else if(e.key=='ArrowLeft' && snake.prev_direction!="right")
+        else if((e.key=='ArrowLeft' || e.key=='a') && snake.prev_direction!="right")
         {
             snake.direction="left";
         }
-        else if(e.key=='ArrowUp' && snake.prev_direction!="down")
+        else if((e.key=='ArrowUp'  || e.key=='w') && snake.prev_direction!="down")
         {
             snake.direction="up";
         }
